@@ -42,7 +42,6 @@ public class UserController {
 		usuario.add("pedro");
 		usuario.add("123");
 		listaUsuarios.add(usuario);
-		System.out.println("name: "+ name + " "+ "password: "+ password);
 		for(int i=0; i<listaUsuarios.size(); i++) {
 			if(listaUsuarios.get(i).get(0).equals(name) && listaUsuarios.get(i).get(1).equals(password))
 			{
@@ -58,7 +57,6 @@ public class UserController {
 		String secretKey = "mySecretKey";
 		List<GrantedAuthority> grantedAuthorities = AuthorityUtils
 				.commaSeparatedStringToAuthorityList("ROLE_USER, ROLE_ADMIN");
-		System.out.println("grantedAuthorities:"+ grantedAuthorities.get(1));
 		
 		String token = Jwts
 				.builder()
