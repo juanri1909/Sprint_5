@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Modificar nombre Jugador</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cambiar Nombre Jugador</h1>
+        <hr>
+        
+        <form action="#" th:action="@{/updateJugador}" th:object="${jugador}" method="POST">
+            <h2>Nombre Jugador Antiguo</h2>
+            <input disabled type="text" th:field="*{nombreJugador}" placeholder="Jugador Nombre Antiguo" class="form-control mb-4 col-4">
+            
+            <h2>Nombre Jugador Nuevo</h2>
+            <input type="text" th:field="*{nuevoNombreJugador}" placeholder="Jugador Nombre Nuevo" class="form-control mb-4 col-4">
+            
+			<button type="submit" class="btn btn-info col-2"> Save Jugador</button>
+            
+            
+       </form>
+       
+
+   <!--     <a th:href="@{http://localhost:9000/sucursal/getAll}"> Partida</a>
+        <br></br>
+        <a th:href="@{http://localhost:9000/sucursal/getAll}"> Partida2</a> -->  
+    </div> 
+</body>
+
+</html>
